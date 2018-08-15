@@ -7,21 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		800BB5D02124C18F002A82A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800BB5CF2124C18F002A82A5 /* AppDelegate.swift */; };
-		800BB5D22124C18F002A82A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800BB5D12124C18F002A82A5 /* ViewController.swift */; };
+		4EF01C171205358D9FA024DD /* Pods_Gitrends.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A37EDF44C77BAB63980BFEC /* Pods_Gitrends.framework */; };
 		800BB5D52124C18F002A82A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 800BB5D32124C18F002A82A5 /* Main.storyboard */; };
 		800BB5D72124C18F002A82A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 800BB5D62124C18F002A82A5 /* Assets.xcassets */; };
 		800BB5DA2124C18F002A82A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 800BB5D82124C18F002A82A5 /* LaunchScreen.storyboard */; };
+		800BB5E62124C2CE002A82A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800BB5E52124C2CE002A82A5 /* AppDelegate.swift */; };
+		800BB5EB2124C379002A82A5 /* TrendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800BB5EA2124C379002A82A5 /* TrendListViewController.swift */; };
+		800BB5EE2124C8FF002A82A5 /* TrendProjectListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800BB5ED2124C8FF002A82A5 /* TrendProjectListTableViewCell.swift */; };
+		800BB5F12124C966002A82A5 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800BB5F02124C966002A82A5 /* Constant.swift */; };
+		800BB5F32124CABF002A82A5 /* TrendListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800BB5F22124CABF002A82A5 /* TrendListViewModel.swift */; };
+		800BB5F52124CC4B002A82A5 /* TrendProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800BB5F42124CC4B002A82A5 /* TrendProject.swift */; };
+		800BB5FF2124D4FB002A82A5 /* AppConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 800BB5FE2124D4FB002A82A5 /* AppConfiguration.plist */; };
+		800BB6012124D567002A82A5 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800BB6002124D567002A82A5 /* APIManager.swift */; };
+		800BB6032124D597002A82A5 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800BB6022124D597002A82A5 /* AppConfiguration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A37EDF44C77BAB63980BFEC /* Pods_Gitrends.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gitrends.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		800BB5CC2124C18F002A82A5 /* Gitrends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gitrends.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		800BB5CF2124C18F002A82A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		800BB5D12124C18F002A82A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		800BB5D42124C18F002A82A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		800BB5D62124C18F002A82A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		800BB5D92124C18F002A82A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		800BB5DB2124C18F002A82A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		800BB5E52124C2CE002A82A5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		800BB5EA2124C379002A82A5 /* TrendListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendListViewController.swift; sourceTree = "<group>"; };
+		800BB5ED2124C8FF002A82A5 /* TrendProjectListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendProjectListTableViewCell.swift; sourceTree = "<group>"; };
+		800BB5F02124C966002A82A5 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		800BB5F22124CABF002A82A5 /* TrendListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendListViewModel.swift; sourceTree = "<group>"; };
+		800BB5F42124CC4B002A82A5 /* TrendProject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendProject.swift; sourceTree = "<group>"; };
+		800BB5FE2124D4FB002A82A5 /* AppConfiguration.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AppConfiguration.plist; sourceTree = "<group>"; };
+		800BB6002124D567002A82A5 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		800BB6022124D597002A82A5 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
+		9B1B905338E58D40D9074253 /* Pods-Gitrends.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gitrends.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gitrends/Pods-Gitrends.debug.xcconfig"; sourceTree = "<group>"; };
+		AA3B3D047B6D872A449983A0 /* Pods-Gitrends.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gitrends.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gitrends/Pods-Gitrends.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +47,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EF01C171205358D9FA024DD /* Pods_Gitrends.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		573F53622342B0FB661738E6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A37EDF44C77BAB63980BFEC /* Pods_Gitrends.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		800BB5C32124C18F002A82A5 = {
 			isa = PBXGroup;
 			children = (
 				800BB5CE2124C18F002A82A5 /* Gitrends */,
 				800BB5CD2124C18F002A82A5 /* Products */,
+				F3572B0009AE17A61A40B14D /* Pods */,
+				573F53622342B0FB661738E6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +83,118 @@
 		800BB5CE2124C18F002A82A5 /* Gitrends */ = {
 			isa = PBXGroup;
 			children = (
-				800BB5CF2124C18F002A82A5 /* AppDelegate.swift */,
-				800BB5D12124C18F002A82A5 /* ViewController.swift */,
+				800BB5F92124D417002A82A5 /* AppConfiguration */,
+				800BB5F62124CC87002A82A5 /* APIManager */,
+				800BB5EF2124C949002A82A5 /* Other */,
+				800BB5E42124C2CE002A82A5 /* AppDelegate */,
 				800BB5D32124C18F002A82A5 /* Main.storyboard */,
+				800BB5E22124C2B8002A82A5 /* Model */,
+				800BB5E32124C2B8002A82A5 /* ViewController */,
+				800BB5E12124C2B8002A82A5 /* ViewModel */,
+				800BB5EC2124C8D9002A82A5 /* TableViewCell */,
 				800BB5D62124C18F002A82A5 /* Assets.xcassets */,
 				800BB5D82124C18F002A82A5 /* LaunchScreen.storyboard */,
 				800BB5DB2124C18F002A82A5 /* Info.plist */,
 			);
 			path = Gitrends;
+			sourceTree = "<group>";
+		};
+		800BB5E12124C2B8002A82A5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				800BB5E82124C314002A82A5 /* TrendListVM */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		800BB5E22124C2B8002A82A5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				800BB5E92124C331002A82A5 /* Trend */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		800BB5E32124C2B8002A82A5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				800BB5E72124C2FD002A82A5 /* TrendListVC */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		800BB5E42124C2CE002A82A5 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				800BB5E52124C2CE002A82A5 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		800BB5E72124C2FD002A82A5 /* TrendListVC */ = {
+			isa = PBXGroup;
+			children = (
+				800BB5EA2124C379002A82A5 /* TrendListViewController.swift */,
+			);
+			path = TrendListVC;
+			sourceTree = "<group>";
+		};
+		800BB5E82124C314002A82A5 /* TrendListVM */ = {
+			isa = PBXGroup;
+			children = (
+				800BB5F22124CABF002A82A5 /* TrendListViewModel.swift */,
+			);
+			path = TrendListVM;
+			sourceTree = "<group>";
+		};
+		800BB5E92124C331002A82A5 /* Trend */ = {
+			isa = PBXGroup;
+			children = (
+				800BB5F42124CC4B002A82A5 /* TrendProject.swift */,
+			);
+			path = Trend;
+			sourceTree = "<group>";
+		};
+		800BB5EC2124C8D9002A82A5 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				800BB5ED2124C8FF002A82A5 /* TrendProjectListTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		800BB5EF2124C949002A82A5 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				800BB5F02124C966002A82A5 /* Constant.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		800BB5F62124CC87002A82A5 /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				800BB6002124D567002A82A5 /* APIManager.swift */,
+			);
+			path = APIManager;
+			sourceTree = "<group>";
+		};
+		800BB5F92124D417002A82A5 /* AppConfiguration */ = {
+			isa = PBXGroup;
+			children = (
+				800BB5FE2124D4FB002A82A5 /* AppConfiguration.plist */,
+				800BB6022124D597002A82A5 /* AppConfiguration.swift */,
+			);
+			path = AppConfiguration;
+			sourceTree = "<group>";
+		};
+		F3572B0009AE17A61A40B14D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9B1B905338E58D40D9074253 /* Pods-Gitrends.debug.xcconfig */,
+				AA3B3D047B6D872A449983A0 /* Pods-Gitrends.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +204,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 800BB5DE2124C18F002A82A5 /* Build configuration list for PBXNativeTarget "Gitrends" */;
 			buildPhases = (
+				56D669FFF913FD42FA670764 /* [CP] Check Pods Manifest.lock */,
 				800BB5C82124C18F002A82A5 /* Sources */,
 				800BB5C92124C18F002A82A5 /* Frameworks */,
 				800BB5CA2124C18F002A82A5 /* Resources */,
+				582FBD321E3AD43EA91BF69B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				800BB5DA2124C18F002A82A5 /* LaunchScreen.storyboard in Resources */,
+				800BB5FF2124D4FB002A82A5 /* AppConfiguration.plist in Resources */,
 				800BB5D72124C18F002A82A5 /* Assets.xcassets in Resources */,
 				800BB5D52124C18F002A82A5 /* Main.storyboard in Resources */,
 			);
@@ -131,13 +267,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		56D669FFF913FD42FA670764 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Gitrends-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		582FBD321E3AD43EA91BF69B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Gitrends/Pods-Gitrends-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/ModelMapper/Mapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Gitrends/Pods-Gitrends-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		800BB5C82124C18F002A82A5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				800BB5D22124C18F002A82A5 /* ViewController.swift in Sources */,
-				800BB5D02124C18F002A82A5 /* AppDelegate.swift in Sources */,
+				800BB6012124D567002A82A5 /* APIManager.swift in Sources */,
+				800BB5F32124CABF002A82A5 /* TrendListViewModel.swift in Sources */,
+				800BB6032124D597002A82A5 /* AppConfiguration.swift in Sources */,
+				800BB5EB2124C379002A82A5 /* TrendListViewController.swift in Sources */,
+				800BB5EE2124C8FF002A82A5 /* TrendProjectListTableViewCell.swift in Sources */,
+				800BB5E62124C2CE002A82A5 /* AppDelegate.swift in Sources */,
+				800BB5F12124C966002A82A5 /* Constant.swift in Sources */,
+				800BB5F52124CC4B002A82A5 /* TrendProject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +457,7 @@
 		};
 		800BB5DF2124C18F002A82A5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B1B905338E58D40D9074253 /* Pods-Gitrends.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -286,6 +472,7 @@
 		};
 		800BB5E02124C18F002A82A5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA3B3D047B6D872A449983A0 /* Pods-Gitrends.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
