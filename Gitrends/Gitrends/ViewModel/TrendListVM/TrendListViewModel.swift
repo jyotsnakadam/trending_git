@@ -30,19 +30,56 @@ class TrendListViewModel: NSObject {
      @parameter:
             parentViewController - This is used to show progress hud on the top of the view
      **/
-    func getTrendList(parentViewController: UIViewController)
+    func getTrendList(parentViewController: UIViewController, completionBlock: @escaping (Bool) -> ())
     {
         self.callTrendProjectList(parentViewController: parentViewController) { (success, response, errorMsg) in
             if success{
-                
+                for responseDict in response as! [[String : Any]]
+                {
+                    let trend = TrendProject(trendprojectDict: responseDict)
+                    self.trendList.insert(trend, at: self.trendList.count)
+                    
+                }
             }
             else
             {
-                
+                let errorAlert  = Utility.createAlertWithoutAction(alertIdentifier: "", messageString: NO_TRENDS, title: "Alert")
+                parentViewController.present(errorAlert, animated: true, completion: nil)
             }
+            completionBlock(success)
         }
     }
     
+    
+    //MARK: - TableView Methods
+    /**
+     Method returns the number of sections for table view
+     **/
+    func numberOfSectionsInTableView() -> Int {
+        return 1
+    }
+    
+    /**
+     Method returns the number of items for Trends Project table view
+     **/
+    func numberOfIRowsInTableView() -> Int {
+        return trendList.count
+    }
+    
+    /**
+     Method setup's the  tableview cell at indexpath
+     Parameters: indexPath - indexpath of the cell
+     tableView - UITableView reference
+     Returns: UITableViewCell object with data populated
+     **/
+    func setUpTrendListTableViewCell(indexPath: IndexPath, tableView: UITableView) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: TREND_PROJECT_LIST_CELL_ID, for: indexPath) as! TrendProjectListTableViewCell
+        let trend = trendList[indexPath.row]
+        cell.projectNameLabel.text = trend.projectName
+        cell.projectStarLabel.text = trend.projectStar
+        cell.projectDetaiLabel.text = trend.projectDetail
+        return cell
+    }
     
     //MARK:- Webservice Methods
     /**
@@ -58,16 +95,15 @@ class TrendListViewModel: NSObject {
         
         //Construct Trend Project List url
         //let trendProjectList = AppConfiguration.BaseURL() + WebservicesURL.TrendListURL + "?q=language&sort=stars&order=desc"
-        let trendProjectList = AppConfiguration.BaseURL() + WebservicesURL.TrendListURL
+        let trendProjectList = AppConfiguration.TrendURL()
         
         //Call APIManager method to process the request
         APIManager.sharedInstance.apiRequest(url: trendProjectList, method: HTTPMethodType.GET, parameters: nil, headers: headers, parentViewController: parentViewController) { (success, response, errorMsg) in
             if success {
                 var message = ""
                 if let responseValue = response as? [[String:Any]] {
-                   print(responseValue)
+                  completionBlock(true, responseValue, nil)
                 }
-                completionBlock(true, message, nil)
             } else {
                 completionBlock(false, response, errorMsg)
             }

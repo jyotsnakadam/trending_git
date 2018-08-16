@@ -4,8 +4,10 @@
 <dict>
 	<key>Development</key>
 	<dict>
+		<key>TrendURL</key>
+		<string>https://github-trending-api.now.sh/repositories?since=today</string>
 		<key>BaseURL</key>
-		<string>https://github-trending-api.now.sh/</string>
+		<string>https://api.github.com/</string>
 	</dict>
 	<key>Stage</key>
 	<dict>

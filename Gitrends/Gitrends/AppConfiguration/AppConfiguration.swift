@@ -27,6 +27,7 @@ struct APP_CONFIGURATION_KEY {
     static let CONFIGURATION_FILE_TYPE = "plist"
     
     static let BASE_URL = "BaseURL"
+    static let TREND_URL = "TrendURL"
 }
 
 class AppConfiguration {
@@ -68,6 +69,16 @@ class AppConfiguration {
     static func BaseURL() -> String {
         if sharedConfiguration.variables != nil {
             return sharedConfiguration.variables[APP_CONFIGURATION_KEY.BASE_URL] as! String
+        }
+        return ""
+    }
+    
+    /**
+     Method returns the Trend URL fo the server api call.
+     **/
+    static func TrendURL() -> String {
+        if sharedConfiguration.variables != nil {
+            return sharedConfiguration.variables[APP_CONFIGURATION_KEY.TREND_URL] as! String
         }
         return ""
     }

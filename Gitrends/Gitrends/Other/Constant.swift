@@ -36,6 +36,7 @@ let TREND_PROJECT_LIST_CELL_ID = "TrendProjectListCellID"
 let INTERNET_NOT_AVAILABLE = "Please check your internet connection!"
 let USER_SESSION_TIMEOUT = "User session timeout!"
 let FETCHING_DATA_ERROR = "There was some error fetching data!"
+let NO_TRENDS = "There is no trending data available"
 
 
 //URL Constants

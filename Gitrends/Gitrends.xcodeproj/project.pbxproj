@@ -20,6 +20,7 @@
 		800BB5FF2124D4FB002A82A5 /* AppConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 800BB5FE2124D4FB002A82A5 /* AppConfiguration.plist */; };
 		800BB6012124D567002A82A5 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800BB6002124D567002A82A5 /* APIManager.swift */; };
 		800BB6032124D597002A82A5 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800BB6022124D597002A82A5 /* AppConfiguration.swift */; };
+		80901E9B212623960065FE2B /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80901E9A212623960065FE2B /* Utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		800BB5FE2124D4FB002A82A5 /* AppConfiguration.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AppConfiguration.plist; sourceTree = "<group>"; };
 		800BB6002124D567002A82A5 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		800BB6022124D597002A82A5 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
+		80901E9A212623960065FE2B /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		9B1B905338E58D40D9074253 /* Pods-Gitrends.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gitrends.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gitrends/Pods-Gitrends.debug.xcconfig"; sourceTree = "<group>"; };
 		AA3B3D047B6D872A449983A0 /* Pods-Gitrends.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gitrends.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gitrends/Pods-Gitrends.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -167,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				800BB5F02124C966002A82A5 /* Constant.swift */,
+				80901E9A212623960065FE2B /* Utility.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 			files = (
 				800BB6012124D567002A82A5 /* APIManager.swift in Sources */,
 				800BB5F32124CABF002A82A5 /* TrendListViewModel.swift in Sources */,
+				80901E9B212623960065FE2B /* Utility.swift in Sources */,
 				800BB6032124D597002A82A5 /* AppConfiguration.swift in Sources */,
 				800BB5EB2124C379002A82A5 /* TrendListViewController.swift in Sources */,
 				800BB5EE2124C8FF002A82A5 /* TrendProjectListTableViewCell.swift in Sources */,

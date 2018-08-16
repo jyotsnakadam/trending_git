@@ -60,7 +60,13 @@ class TrendListViewController: UIViewController, UITableViewDelegate, UITableVie
     private func doInitialization()
     {
         self.title = GIT_HUB_TITLE
-        self.trendListVM.getTrendList(parentViewController: self)
+        self.trendListVM.getTrendList(parentViewController: self){ success in
+            
+            if success{
+                self.trendProjectListTableView.reloadData()
+            }
+            
+        }
     }
 
     /*
@@ -74,14 +80,17 @@ class TrendListViewController: UIViewController, UITableViewDelegate, UITableVie
     */
     
     //MARK: - UITableView Delegate & DataSource Methods
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return self.trendListVM.numberOfSectionsInTableView()
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return self.trendListVM.numberOfIRowsInTableView()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        return UITableViewCell()
+        let cell = self.trendListVM.setUpTrendListTableViewCell(indexPath: indexPath, tableView: tableView)
+        return cell
     }
     
 
