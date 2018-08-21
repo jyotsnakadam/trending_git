@@ -24,6 +24,8 @@ class TrendListViewModel: NSObject {
     
     //Object Initialization
     private var trendList = [TrendProject]()
+    var searchActive : Bool = false
+     var filtered:[TrendProject] = []
     
     
     //MARK: - Getter Methods
@@ -70,6 +72,19 @@ class TrendListViewModel: NSObject {
         }
     }
     
+    //MARK: - Filter the table as per search bar
+    
+    func createFilter(searchText: String)
+    {
+        filtered = trendList.filter({ (trend) -> Bool in
+            let tmp: NSString = trend.projectName as NSString
+            let tmp1 : NSString = trend.projectDetail as NSString
+            let range = tmp.range(of: searchText, options: .caseInsensitive)
+            let range1 = tmp1.range(of: searchText, options: .caseInsensitive)
+            return (range.location != NSNotFound || range1.location != NSNotFound)
+        })
+        
+    }
     
     //MARK: - TableView Methods
     /**
@@ -83,6 +98,10 @@ class TrendListViewModel: NSObject {
      Method returns the number of items for Trends Project table view
      **/
     func numberOfIRowsInTableView() -> Int {
+        if searchActive
+        {
+            return filtered.count
+        }
         return trendList.count
     }
     
@@ -94,10 +113,20 @@ class TrendListViewModel: NSObject {
      **/
     func setUpTrendListTableViewCell(indexPath: IndexPath, tableView: UITableView) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TREND_PROJECT_LIST_CELL_ID, for: indexPath) as! TrendProjectListTableViewCell
-        let trend = trendList[indexPath.row]
-        cell.projectNameLabel.text = trend.projectName
-        cell.projectStarLabel.text = trend.projectStar
-        cell.projectDetaiLabel.text = trend.projectDetail
+        if searchActive{
+            let trend = filtered[indexPath.row]
+            cell.projectNameLabel.text = trend.projectName
+            cell.projectStarLabel.text = trend.projectStar
+            cell.projectDetaiLabel.text = trend.projectDetail
+        }
+        else
+        {
+            let trend = trendList[indexPath.row]
+            cell.projectNameLabel.text = trend.projectName
+            cell.projectStarLabel.text = trend.projectStar
+            cell.projectDetaiLabel.text = trend.projectDetail
+        }
+        
         return cell
     }
     

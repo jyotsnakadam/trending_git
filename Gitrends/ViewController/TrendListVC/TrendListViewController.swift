@@ -19,9 +19,10 @@
 
 import UIKit
 
-class TrendListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TrendListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     //Outlet Component Variable
     @IBOutlet weak var trendProjectListTableView : UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     //Create View Model Object here
     let trendListVM = TrendListViewModel()
@@ -109,5 +110,34 @@ class TrendListViewController: UIViewController, UITableViewDelegate, UITableVie
         self.performSegue(withIdentifier: SEGUE_TO_PROJECT_DETAIL_VC, sender:projectDict)
     }
     
+    //MARK: - Search bar Delegate Method
+    
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        self.trendListVM.searchActive = true
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        self.trendListVM.searchActive = false
+        self.view.endEditing(true)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        self.trendListVM.searchActive = false
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.trendListVM.searchActive = false
+        self.view.endEditing(true)
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.trendListVM.createFilter(searchText: searchText)
+        if(self.trendListVM.filtered.count == 0){
+            self.trendListVM.searchActive = false
+        } else {
+            self.trendListVM.searchActive = true
+        }
+        self.trendProjectListTableView.reloadData()
+    }
 
 }

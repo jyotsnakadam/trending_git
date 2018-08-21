@@ -24,6 +24,9 @@
                                     <constraint firstAttribute="height" constant="56" id="vjh-Wc-kLD"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ZFZ-Oy-7eT" id="8h3-mc-79J"/>
+                                </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jJu-HJ-ciy">
                                 <rect key="frame" x="0.0" y="120" width="375" height="547"/>
@@ -102,6 +105,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="W59-rb-XhJ"/>
                     <connections>
+                        <outlet property="searchBar" destination="uML-Uc-NnQ" id="ufX-Uq-eLz"/>
                         <outlet property="trendProjectListTableView" destination="jJu-HJ-ciy" id="qdr-Re-Vlx"/>
                         <segue destination="S3t-h9-DBj" kind="show" identifier="SegueToProjectDetailVC" id="9vO-fN-KI1"/>
                     </connections>
