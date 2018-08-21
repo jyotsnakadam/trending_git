@@ -98,7 +98,7 @@ class TrendListViewModel: NSObject {
      Method returns the number of items for Trends Project table view
      **/
     func numberOfIRowsInTableView() -> Int {
-        if searchActive
+        if searchActive && filtered.count > 0
         {
             return filtered.count
         }
@@ -113,7 +113,8 @@ class TrendListViewModel: NSObject {
      **/
     func setUpTrendListTableViewCell(indexPath: IndexPath, tableView: UITableView) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TREND_PROJECT_LIST_CELL_ID, for: indexPath) as! TrendProjectListTableViewCell
-        if searchActive{
+        if searchActive && filtered.count > 0
+        {
             let trend = filtered[indexPath.row]
             cell.projectNameLabel.text = trend.projectName
             cell.projectStarLabel.text = trend.projectStar
