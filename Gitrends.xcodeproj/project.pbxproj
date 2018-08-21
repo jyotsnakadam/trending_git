@@ -21,6 +21,13 @@
 		800BB6012124D567002A82A5 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800BB6002124D567002A82A5 /* APIManager.swift */; };
 		800BB6032124D597002A82A5 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800BB6022124D597002A82A5 /* AppConfiguration.swift */; };
 		80901E9B212623960065FE2B /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80901E9A212623960065FE2B /* Utility.swift */; };
+		8095E7AA212BD727005568EC /* StringEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8095E7A6212BD727005568EC /* StringEx.swift */; };
+		8095E7AF212BD94C005568EC /* ConversionMDFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8095E7AE212BD94B005568EC /* ConversionMDFormat.swift */; };
+		80AE4164212B6AFC0011CB5B /* ProjectDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AE4163212B6AFC0011CB5B /* ProjectDetailViewController.swift */; };
+		80AE4167212B71190011CB5B /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AE4166212B71190011CB5B /* Avatar.swift */; };
+		80AE4169212B71240011CB5B /* ReadMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AE4168212B71240011CB5B /* ReadMe.swift */; };
+		80AE416C212B782A0011CB5B /* ProjectDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AE416B212B782A0011CB5B /* ProjectDetailViewModel.swift */; };
+		80AE4170212B83C20011CB5B /* CommonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AE416F212B83C20011CB5B /* CommonExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +47,13 @@
 		800BB6002124D567002A82A5 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		800BB6022124D597002A82A5 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 		80901E9A212623960065FE2B /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		8095E7A6212BD727005568EC /* StringEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringEx.swift; sourceTree = "<group>"; };
+		8095E7AE212BD94B005568EC /* ConversionMDFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversionMDFormat.swift; sourceTree = "<group>"; };
+		80AE4163212B6AFC0011CB5B /* ProjectDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewController.swift; sourceTree = "<group>"; };
+		80AE4166212B71190011CB5B /* Avatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
+		80AE4168212B71240011CB5B /* ReadMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadMe.swift; sourceTree = "<group>"; };
+		80AE416B212B782A0011CB5B /* ProjectDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailViewModel.swift; sourceTree = "<group>"; };
+		80AE416F212B83C20011CB5B /* CommonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonExtensions.swift; sourceTree = "<group>"; };
 		9B1B905338E58D40D9074253 /* Pods-Gitrends.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gitrends.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Gitrends/Pods-Gitrends.debug.xcconfig"; sourceTree = "<group>"; };
 		AA3B3D047B6D872A449983A0 /* Pods-Gitrends.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Gitrends.release.xcconfig"; path = "Pods/Target Support Files/Pods-Gitrends/Pods-Gitrends.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,6 +99,7 @@
 		800BB5CE2124C18F002A82A5 /* Gitrends */ = {
 			isa = PBXGroup;
 			children = (
+				8095E7A4212BD727005568EC /* MarkedView */,
 				800BB5F92124D417002A82A5 /* AppConfiguration */,
 				800BB5F62124CC87002A82A5 /* APIManager */,
 				800BB5EF2124C949002A82A5 /* Other */,
@@ -104,6 +119,7 @@
 		800BB5E12124C2B8002A82A5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				80AE416A212B77F90011CB5B /* ProjectDetailVM */,
 				800BB5E82124C314002A82A5 /* TrendListVM */,
 			);
 			path = ViewModel;
@@ -112,6 +128,7 @@
 		800BB5E22124C2B8002A82A5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				80AE4165212B71050011CB5B /* ProjectDetail */,
 				800BB5E92124C331002A82A5 /* Trend */,
 			);
 			path = Model;
@@ -120,6 +137,7 @@
 		800BB5E32124C2B8002A82A5 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				80AE4162212B6AE60011CB5B /* ProjectDetailVC */,
 				800BB5E72124C2FD002A82A5 /* TrendListVC */,
 			);
 			path = ViewController;
@@ -170,6 +188,7 @@
 			children = (
 				800BB5F02124C966002A82A5 /* Constant.swift */,
 				80901E9A212623960065FE2B /* Utility.swift */,
+				80AE416F212B83C20011CB5B /* CommonExtensions.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -189,6 +208,48 @@
 				800BB6022124D597002A82A5 /* AppConfiguration.swift */,
 			);
 			path = AppConfiguration;
+			sourceTree = "<group>";
+		};
+		8095E7A4212BD727005568EC /* MarkedView */ = {
+			isa = PBXGroup;
+			children = (
+				8095E7AE212BD94B005568EC /* ConversionMDFormat.swift */,
+				8095E7A5212BD727005568EC /* extentions */,
+			);
+			path = MarkedView;
+			sourceTree = "<group>";
+		};
+		8095E7A5212BD727005568EC /* extentions */ = {
+			isa = PBXGroup;
+			children = (
+				8095E7A6212BD727005568EC /* StringEx.swift */,
+			);
+			path = extentions;
+			sourceTree = "<group>";
+		};
+		80AE4162212B6AE60011CB5B /* ProjectDetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				80AE4163212B6AFC0011CB5B /* ProjectDetailViewController.swift */,
+			);
+			path = ProjectDetailVC;
+			sourceTree = "<group>";
+		};
+		80AE4165212B71050011CB5B /* ProjectDetail */ = {
+			isa = PBXGroup;
+			children = (
+				80AE4166212B71190011CB5B /* Avatar.swift */,
+				80AE4168212B71240011CB5B /* ReadMe.swift */,
+			);
+			path = ProjectDetail;
+			sourceTree = "<group>";
+		};
+		80AE416A212B77F90011CB5B /* ProjectDetailVM */ = {
+			isa = PBXGroup;
+			children = (
+				80AE416B212B782A0011CB5B /* ProjectDetailViewModel.swift */,
+			);
+			path = ProjectDetailVM;
 			sourceTree = "<group>";
 		};
 		F3572B0009AE17A61A40B14D /* Pods */ = {
@@ -299,12 +360,14 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/ModelMapper/Mapper.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -318,13 +381,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80AE416C212B782A0011CB5B /* ProjectDetailViewModel.swift in Sources */,
 				800BB6012124D567002A82A5 /* APIManager.swift in Sources */,
+				80AE4164212B6AFC0011CB5B /* ProjectDetailViewController.swift in Sources */,
+				8095E7AA212BD727005568EC /* StringEx.swift in Sources */,
 				800BB5F32124CABF002A82A5 /* TrendListViewModel.swift in Sources */,
 				80901E9B212623960065FE2B /* Utility.swift in Sources */,
 				800BB6032124D597002A82A5 /* AppConfiguration.swift in Sources */,
+				80AE4170212B83C20011CB5B /* CommonExtensions.swift in Sources */,
+				80AE4167212B71190011CB5B /* Avatar.swift in Sources */,
+				8095E7AF212BD94C005568EC /* ConversionMDFormat.swift in Sources */,
 				800BB5EB2124C379002A82A5 /* TrendListViewController.swift in Sources */,
 				800BB5EE2124C8FF002A82A5 /* TrendProjectListTableViewCell.swift in Sources */,
 				800BB5E62124C2CE002A82A5 /* AppDelegate.swift in Sources */,
+				80AE4169212B71240011CB5B /* ReadMe.swift in Sources */,
 				800BB5F12124C966002A82A5 /* Constant.swift in Sources */,
 				800BB5F52124CC4B002A82A5 /* TrendProject.swift in Sources */,
 			);

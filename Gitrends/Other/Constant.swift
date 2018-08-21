@@ -50,5 +50,9 @@ struct ResponseCode{
     static let UserSessionTimeOut       = 418
 }
 
+//Segue ID
+
+let SEGUE_TO_PROJECT_DETAIL_VC = "SegueToProjectDetailVC"
+
 
 

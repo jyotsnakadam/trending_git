@@ -34,6 +34,10 @@ class TrendListViewController: UIViewController, UITableViewDelegate, UITableVie
         // Do any additional setup after loading the view.
         self.setupUI()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -69,15 +73,21 @@ class TrendListViewController: UIViewController, UITableViewDelegate, UITableVie
         }
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == SEGUE_TO_PROJECT_DETAIL_VC
+        {
+            let dict = sender as! [String : String]
+            let projectDetailViewController = segue.destination as! ProjectDetailViewController
+            projectDetailViewController.projectDict = dict
+        }
     }
-    */
+    
     
     //MARK: - UITableView Delegate & DataSource Methods
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -91,6 +101,12 @@ class TrendListViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.trendListVM.setUpTrendListTableViewCell(indexPath: indexPath, tableView: tableView)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let projectDict = self.trendListVM.getProjectDetail(index: indexPath.row)
+        self.navigationItem.backBarButtonItem?.title = ""
+        self.performSegue(withIdentifier: SEGUE_TO_PROJECT_DETAIL_VC, sender:projectDict)
     }
     
 

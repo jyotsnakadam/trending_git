@@ -23,8 +23,28 @@ import UIKit
 class TrendListViewModel: NSObject {
     
     //Object Initialization
-    var trendList = [TrendProject]()
+    private var trendList = [TrendProject]()
     
+    
+    //MARK: - Getter Methods
+    
+    /**
+     @method : This method ets the project detail
+     @parameter:
+     @return :
+        [String:String] - It will return the project dict
+    **/
+    func getProjectDetail(index : Int)->[String:String]
+    {
+        let trend = trendList[index]
+        let projectDict = [TREND_PROJECT_KEY.PROJECT_NAME:trend.projectName,
+                           TREND_PROJECT_KEY.USER_NAME:trend.userName,
+                           TREND_PROJECT_KEY.PROJECT_DETAIL:trend.projectDetail,
+                           TREND_PROJECT_KEY.PROJECT_STAR:trend.projectStar,
+                           TREND_PROJECT_KEY.PROJECT_FORKS:trend.forks]
+        return projectDict
+        
+    }
     /**
      @method: This method call the webservice API to get the data
      @parameter:
@@ -100,7 +120,6 @@ class TrendListViewModel: NSObject {
         //Call APIManager method to process the request
         APIManager.sharedInstance.apiRequest(url: trendProjectList, method: HTTPMethodType.GET, parameters: nil, headers: headers, parentViewController: parentViewController) { (success, response, errorMsg) in
             if success {
-                var message = ""
                 if let responseValue = response as? [[String:Any]] {
                   completionBlock(true, responseValue, nil)
                 }

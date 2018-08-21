@@ -222,7 +222,7 @@ class APIManager: NSObject {
         }
         
         let keysArray = headers?.allKeys
-        print(keysArray)
+        //print(keysArray)
         for key in keysArray!
         {
             request.setValue(String(describing: headers!.value(forKey: key as! String)!), forHTTPHeaderField:key as! String)

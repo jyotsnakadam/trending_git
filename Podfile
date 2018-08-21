@@ -10,5 +10,6 @@ target 'Gitrends' do
 pod ‘ModelMapper’, '~> 7.0.0'
 pod 'Alamofire', '~> 4.4'
 pod 'MBProgressHUD', '~> 1.0.0'
+pod 'SDWebImage'
 
 end

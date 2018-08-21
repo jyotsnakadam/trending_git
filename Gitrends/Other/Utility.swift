@@ -1,3 +1,14 @@
+/*********************************************************************
+ Project Name : Gitrends
+ 
+ File Name : Utility.swift
+ 
+ Owner of File : Jyotsna Kadam
+ 
+ Created Date: 17/08/18
+ 
+ Description of File: This is a Utility class keeps functions which we can reuse in project.
+ *********************************************************************/
 //
 //  Utility.swift
 //  Gitrends
